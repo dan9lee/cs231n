@@ -1,0 +1,34 @@
+CONFIG_NAME: 'attn2'
+
+DATASET_NAME: 'birds'
+DATA_DIR: '../data/birds'
+GPU_ID: 7
+WORKERS: 1
+
+#B_VALIDATION: False  # True  # False
+B_VALIDATION: True
+TREE:
+    BRANCH_NUM: 3
+
+
+TRAIN:
+    FLAG: False
+    #NET_G: '../output/vanilla_with_dropout_netG_epoch_300.pth'
+    #NET_G: '../EVANI_SNDCGAN_netG_epoch_400.pth'
+    NET_G: '../output/birds_attn2_2018_06_07_04_06_01/Model/netG_epoch_300.pth'
+    B_NET_D: False
+###########################ORIGINAL BATCH SIZE WAS 100#######################
+    BATCH_SIZE: 20
+    NET_E: '../DAMSMencoders/bird/text_encoder200.pth'
+
+
+GAN:
+    DF_DIM: 64
+    GF_DIM: 32
+    Z_DIM: 100
+    R_NUM: 2
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
+    WORDS_NUM: 25
