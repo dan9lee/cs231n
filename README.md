@@ -12,6 +12,7 @@ model_SN_FINAL applies spectral norm after all Conv2D operations in each of the 
 model_SN_on_D1_FINAL applies spectral norm only after the Conv2D operations in the first discriminator branch
 
 Unssuccessful models:
+
 model_SN_full_channels_dropout - modified the AttnGAN architecture to add spectral normalization to discriminators, removes batchnorm in the discriminators, adds greater filter depth, applies some dropout in the  generator.
 
 WGAN-GP: includes trainer_WGAN_updated and losses_WGAN 
